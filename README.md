@@ -12,9 +12,11 @@
 
 ---
 
-## 📖 Sobre o projeto
+## 🐛 Sobre o projeto
 
 O **Angular To-Do List** é uma aplicação web moderna e intuitiva de gerenciamento de tarefas do dia a dia. Desenvolvido como parte de uma atividade prática individual, o projeto tem como objetivo principal aplicar os conceitos fundamentais do framework Angular, proporcionando uma experiência fluida, reativa e organizada para o controle de pendências.
+
+Desenvolvido durante o bootcamp da **WoMakersCode** 💜
 
 ---
 
@@ -57,7 +59,7 @@ Certifique-se de ter o **Node.js** e o **Angular CLI** instalados em sua máquin
 ### 1. Clonar o repositório
 Abra o seu terminal e execute o comando abaixo:
 ```bash
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+git clone https://github.com/MaluWhoo/Lista-de-Tarefas-em-Angular.git
 ```
 
 ### 2. Acessar a pasta do projeto
@@ -93,7 +95,6 @@ Durante o desenvolvimento deste projeto, foi possível consolidar e praticar con
 * **Diretivas Estruturais e de Atributo:** Utilização de `*ngFor` para renderização de listas, `*ngIf` para renderização condicional e manipulação de classes/estilos dinâmicos.
 * **Gestão de Estado Local:** Manipulação reativa de arrays no TypeScript para adicionar, atualizar e remover elementos instantaneamente na interface.
 
----
 
 <!-- ## 📄 Licença e Autor
 
