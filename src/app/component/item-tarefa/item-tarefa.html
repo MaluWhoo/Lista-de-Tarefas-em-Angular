@@ -1,0 +1,49 @@
+<div class="container-tarefas">
+    <div class="header">
+        <h1 class="titulo">Minhas Tarefas</h1>
+        <div class="card-dica">
+            <span><i class="fa-solid fa-arrows-up-down"></i> Arraste para mudar a posição</span>
+        </div>
+    </div>
+
+    <div>
+        <form [formGroup]="formItem" class="input-grupo" (ngSubmit)="enviar()">
+            <input formControlName="descricao" type="text" placeholder="Digite sua tarefa">
+            <button type="submit" [disabled]="!formItem.valid" class="btn-adicionar">+ Adicionar</button>
+
+            <!-- <p class="erro" *ngIf="formItem.get('descricao')?.invalid">
+                erro
+            </p> -->
+            
+            <!-- <p class="erro" *ngIf="formItem.get('descricao')?.invalid && (formItem.get('descricao')?.touched || formItem.get('descricao')?.dirty)">
+                Digite uma tarefa para dicionar.
+            </p> -->
+        </form>
+    </div>
+
+    <div cdkDropList (cdkDropListDropped)="drop($event)">
+        @for (tarefa of ListaService.tarefas; track tarefa.descricao){
+        <div cdkDrag>
+            <div class="tarefa" [class.tarefa-concluida]="tarefa.concluida"
+                (click)="ListaService.marcarComoConcluida(tarefa)">
+                <input type="checkbox" [checked]="tarefa.concluida"
+                    (click)="$event.stopPropagation(); ListaService.marcarComoConcluida(tarefa)">
+                <p class="texto-tarefa">{{ tarefa.descricao }}</p>
+
+                <button class="btn-remover" (click)="$event.stopPropagation(); ListaService.removerTarefa(tarefa)"> 
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+        }
+    </div>
+
+    <p class="contador">Tarefas concluídas: {{ ListaService.tarefas.filter(t => t.concluida).length }}</p>
+    <!-- Barra de Progresso -->
+    <mat-progress-bar mode="determinate"
+        [value]="(ListaService.tarefas.length > 0) ? (ListaService.tarefas.filter(t => t.concluida).length / ListaService.tarefas.length) * 100 : 0"
+        [class.barra-verde]="ListaService.tarefas.length > 0 && ListaService.tarefas.filter(t => t.concluida).length === ListaService.tarefas.length"
+        [class.barra-laranja]="(ListaService.tarefas.length > 0) ? ((ListaService.tarefas.filter(t => t.concluida).length / ListaService.tarefas.length) * 100) >= 50 : false"
+        [class.barra-amarela]="(ListaService.tarefas.length > 0) ? ((ListaService.tarefas.filter(t => t.concluida).length / ListaService.tarefas.length) * 100) >= 80 : false">
+    </mat-progress-bar>
+</div>

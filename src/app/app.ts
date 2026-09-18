@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ItemTarefaComponent } from './component/item-tarefa/item-tarefa';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [ ItemTarefaComponent, CommonModule],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
