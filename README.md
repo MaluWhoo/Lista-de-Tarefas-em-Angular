@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📝 Angular To-Do List (Minhas Tarefas)
+# 📝 Lista de Tarefas em Angular
 
 [![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -14,7 +14,7 @@
 
 ## 🐛 Sobre o projeto
 
-O **Angular To-Do List** é uma aplicação web moderna e intuitiva de gerenciamento de tarefas do dia a dia. Desenvolvido como parte de uma atividade prática individual, o projeto tem como objetivo principal aplicar os conceitos fundamentais do framework Angular, proporcionando uma experiência fluida, reativa e organizada para o controle de pendências.
+O **Lista de Tarefas** é uma aplicação web moderna e intuitiva de gerenciamento de tarefas do dia a dia. Desenvolvido como parte de uma atividade prática individual, o projeto tem como objetivo principal aplicar os conceitos fundamentais do framework Angular, proporcionando uma experiência fluida, reativa e organizada para o controle de pendências.
 
 Desenvolvido durante o bootcamp da **WoMakersCode** 💜
 
