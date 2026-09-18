@@ -20,7 +20,9 @@ O **Angular To-Do List** é uma aplicação web moderna e intuitiva de gerenciam
 
 ## 📷 Screenshot
 
-![To-Do-List](Screenshot.jpeg)
+<div align="center">
+  <img src="Screenshot.jpeg" alt="To-Do-List" width="400" />
+</div>
 
 ---
 
