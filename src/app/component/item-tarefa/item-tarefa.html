@@ -1,9 +1,10 @@
 <div class="container-tarefas">
     <div class="header">
         <h1 class="titulo">Minhas Tarefas</h1>
-        <div class="card-dica">
+        <!-- <div class="card-dica">
             <span><i class="fa-solid fa-arrows-up-down"></i> Arraste para mudar a posição</span>
-        </div>
+        </div> -->
+        <p>Adicione tarefas e organize-as arrastando 🪲</p>
     </div>
 
     <div>
@@ -14,11 +15,13 @@
             <!-- <p class="erro" *ngIf="formItem.get('descricao')?.invalid">
                 erro
             </p> -->
-            
-            <!-- <p class="erro" *ngIf="formItem.get('descricao')?.invalid && (formItem.get('descricao')?.touched || formItem.get('descricao')?.dirty)">
-                Digite uma tarefa para dicionar.
-            </p> -->
         </form>
+
+        <!-- <p class="erro"
+            *ngIf="formItem.get('descricao')?.invalid && (formItem.get('descricao')?.touched || formItem.get('descricao')?.dirty)">
+            Digite uma tarefa e dicione-a.
+        </p> -->
+
     </div>
 
     <div cdkDropList (cdkDropListDropped)="drop($event)">
@@ -30,7 +33,7 @@
                     (click)="$event.stopPropagation(); ListaService.marcarComoConcluida(tarefa)">
                 <p class="texto-tarefa">{{ tarefa.descricao }}</p>
 
-                <button class="btn-remover" (click)="$event.stopPropagation(); ListaService.removerTarefa(tarefa)"> 
+                <button class="btn-remover" (click)="$event.stopPropagation(); ListaService.removerTarefa(tarefa)">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
