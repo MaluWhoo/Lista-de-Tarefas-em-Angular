@@ -38,7 +38,7 @@ export class ItemTarefaComponent {
     return this.ListaService.tarefas.filter(t => t.concluida).length;
   }
 
-  percentualProgresso(): number {
+  get percentualProgresso(): number {
     return this.totalTarefas > 0 ? (this.tarefasConcluidas / this.totalTarefas) * 100 : 0;
   }
 
@@ -53,7 +53,7 @@ export class ItemTarefaComponent {
   }
 
   corProgresso(): string {
-    const pct = this.percentualProgresso();
+    const pct = this.percentualProgresso;
     if (pct >= 100) return '#6DBF94';
     if (pct >= 60) return '#8DC8A6';
     if (pct >= 30) return '#E6B46B';
